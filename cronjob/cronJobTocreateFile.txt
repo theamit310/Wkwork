@@ -1,0 +1,25 @@
+a cron job... and write sample commands to implement it.
+ 
+For e.g. 
+to start with.. write a cron job to create a file and another cron job to delete the same file
+The file should be created  after every 2 minutes and the the same file should be deleted after every 4 minutes.
+
+----> crontab -e to open editor
+---->//cronjob 23 20 * * * /bin/sh /home/amit/Desktop/abc.sh 
+
+***************change directory to Desktop *************************
+
+--->  vim abc.sh
+touch /home/user/Desktop/file.txt
+
+----> chmod u+x abc.sh 
+
+*************** Deleting a file with cronjob **************
+
+----> cronjob 23 24 * * * /bin/sh /home/amit/Desktop/aaa.sh
+
+**************scheduling the task every 2min to create & every 4th min to delete ********************
+
+cronjob */2 * * * * /bin/sh /home/amit/Desktop/abc.sh
+cronjob */4 * * * * /bin/sh /home/amit/Desktop/aaa.sh
+
